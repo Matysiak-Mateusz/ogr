@@ -5,7 +5,7 @@ Prowadzisz bohatera przez las, by zdążyć z miksturą uzdrawiającą dla chore
 
 ## Live demo
 
-🔗 _link zostanie dodany po wdrożeniu na Vercel_
+🔗 **https://ogr-two.vercel.app**
 
 ## Funkcje
 
