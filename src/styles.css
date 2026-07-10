@@ -1,0 +1,381 @@
+/* ---------- Font ---------- */
+@font-face {
+  font-family: "Departure Mono";
+  src:
+    url("./assets/fonts/DepartureMono.woff2") format("woff2"),
+    url("./assets/fonts/DepartureMono.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Daydream";
+  src: url("./assets/fonts/Daydream DEMO.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Motyw (tylko dwa kolory) ---------- */
+:root {
+  --color-light: #d9c9b6;
+  --color-dark: #333333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Departure Mono", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  /* domyślnie jasny motyw */
+  --bg: var(--color-light);
+  --fg: var(--color-dark);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Widoczny focus dla nawigacji klawiaturą (WCAG 2.4.7) */
+:focus-visible {
+  outline: 3px solid var(--fg);
+  outline-offset: 3px;
+}
+
+body[data-theme="dark"] {
+  --bg: var(--color-dark);
+  --fg: var(--color-light);
+}
+
+/* Płynne, subtelne, ale szybkie przejście przy zmianie motywu.
+   Animujemy tylko kolory (nie transform/box-shadow przycisków),
+   dzięki czemu kliknięcia zachowują natychmiastowy feedback. */
+body,
+.pixel-frame,
+.pixel-button,
+.theme-toggle,
+.music-toggle,
+.language-toggle {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .pixel-frame,
+  .pixel-button,
+  .theme-toggle,
+  .music-toggle,
+  .language-toggle {
+    transition: none;
+  }
+}
+
+/* ---------- Pixelowe komponenty ---------- */
+.pixel-frame {
+  background: var(--bg);
+  border: 4px solid var(--fg);
+  box-shadow: 8px 8px 0 0 var(--fg);
+  padding: 1.5rem;
+}
+
+.pixel-button {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  min-height: 44px; /* minimalny cel dotykowy (WCAG 2.5.5) */
+  background: var(--bg);
+  color: var(--fg);
+  border: 3px solid var(--fg);
+  border-radius: 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+.pixel-button:hover:not(:disabled),
+.pixel-button.is-active {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.pixel-button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+}
+
+.pixel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Przyciski w prawym górnym rogu (motyw + muzyka) ---------- */
+.top-bar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+.theme-toggle,
+.music-toggle,
+.language-toggle {
+  font-size: 1.4rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--fg);
+  border: 3px solid var(--fg);
+  box-shadow: 3px 3px 0 0 var(--fg);
+  cursor: pointer;
+}
+
+.language-toggle {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.theme-toggle:active,
+.music-toggle:active,
+.language-toggle:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 0 var(--fg);
+}
+
+/* ---------- Ekran startowy ---------- */
+.start-screen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.ogre-image {
+  width: min(460px, 88vw);
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.game-title {
+  margin: 0;
+  margin-top: -1.75rem;
+  font-family: "Daydream", "Departure Mono", monospace;
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: min(260px, 80vw);
+  margin-top: 1.5rem;
+}
+
+.menu .pixel-button {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* ---------- Ekran gry ---------- */
+.game-screen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.game-frame {
+  width: min(680px, 100%);
+  max-height: 80vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.game-scroll {
+  width: 100%;
+  overflow-y: auto;
+  padding-right: 1.5rem;
+}
+
+.paragraph-text {
+  white-space: pre-wrap;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.choices {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--fg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Każdy przycisk montowany jest pojedynczo (timing steruje JS),
+   a ta animacja dodaje płynne wejście pojawiającego się elementu. */
+.choices > * {
+  animation: choiceReveal 0.45s ease backwards;
+}
+
+/* Po pominięciu (klik) przyciski pojawiają się natychmiast, bez animacji. */
+.choices.no-anim > * {
+  animation: none;
+}
+
+@keyframes choiceReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ending-label {
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+/* ---------- Pixelowy scrollbar ---------- */
+.game-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--fg) var(--bg);
+}
+
+.game-scroll::-webkit-scrollbar {
+  width: 14px;
+}
+
+.game-scroll::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-left: 3px solid var(--fg);
+  border-radius: 0;
+}
+
+.game-scroll::-webkit-scrollbar-thumb {
+  background: var(--fg);
+  border: 3px solid var(--bg);
+  border-radius: 0;
+}
+
+/* Kwadratowe (nie zaokrąglone) strzałki suwaka */
+.game-scroll::-webkit-scrollbar-button:single-button {
+  background: var(--fg);
+  border: 3px solid var(--bg);
+  border-radius: 0;
+  height: 14px;
+  display: block;
+}
+
+/* ---------- Wersja mobilna: brak ramki, sam tekst ---------- */
+@media (max-width: 600px) {
+  .game-screen {
+    align-items: flex-start;
+    padding: 4.5rem 1rem 1.5rem;
+  }
+
+  .game-frame {
+    width: 100%;
+    max-height: none;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  /* strona przewija się natywnie, wewnętrzny suwak zbędny */
+  .game-scroll {
+    overflow: visible;
+    max-height: none;
+    padding-right: 0;
+  }
+
+  /* Przyciski motywu i dźwięku: poziomo, na górze, bez ramek */
+  .top-bar {
+    top: 0.5rem;
+    right: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .theme-toggle,
+  .music-toggle,
+  .language-toggle {
+    border: none;
+    box-shadow: none;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: transparent;
+  }
+
+  .theme-toggle:active,
+  .music-toggle:active,
+  .language-toggle:active {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .game-title {
+    font-size: 3.6rem;
+    margin-top: -1.25rem;
+  }
+
+  .ogre-image {
+    width: 88vw;
+  }
+}
+
+/* Ogranicz animacje dla użytkowników z preferencją redukcji ruchu */
+@media (prefers-reduced-motion: reduce) {
+  .pixel-button:active:not(:disabled),
+  .theme-toggle:active,
+  .music-toggle:active,
+  .language-toggle:active {
+    transform: none;
+  }
+
+  .choices > * {
+    animation: none;
+  }
+}
