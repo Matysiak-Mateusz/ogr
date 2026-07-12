@@ -45,7 +45,9 @@ export default function GameScreen({
       }));
     }
     if (paragraph.type === "continue" && paragraph.next) {
-      return [{ label: t("continue"), onSelect: () => onChoose(paragraph.next) }];
+      return [
+        { label: t("continue"), onSelect: () => onChoose(paragraph.next) },
+      ];
     }
     return [];
   }, [paragraph, onChoose, t]);

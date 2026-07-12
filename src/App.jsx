@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { getMusicKey } from "./audio/musicMap.js";
 import { useGameMusic } from "./audio/useGameMusic.js";
+import CreditsScreen from "./components/CreditsScreen.jsx";
 import GameScreen from "./components/GameScreen.jsx";
 import StartScreen from "./components/StartScreen.jsx";
 import {
@@ -21,7 +22,7 @@ export default function App() {
   const story = getStory(lang);
 
   const [theme, setTheme] = useState(() => loadTheme());
-  const [screen, setScreen] = useState("start"); // 'start' | 'game'
+  const [screen, setScreen] = useState("start"); // 'start' | 'game' | 'credits'
   const [currentId, setCurrentId] = useState(
     () => loadSave()?.currentParagraphId || story.startId,
   );
@@ -91,6 +92,15 @@ export default function App() {
     setCanContinue(hasSave());
   }
 
+  if (screen === "credits") {
+    return (
+      <CreditsScreen
+        onToggleLanguage={toggleLanguage}
+        onBack={() => setScreen("start")}
+      />
+    );
+  }
+
   if (screen === "start") {
     return (
       <StartScreen
@@ -102,6 +112,7 @@ export default function App() {
         canContinue={canContinue}
         onNewGame={startNewGame}
         onContinue={continueGame}
+        onCredits={() => setScreen("credits")}
       />
     );
   }

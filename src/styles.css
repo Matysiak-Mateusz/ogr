@@ -379,3 +379,77 @@ body,
     animation: none;
   }
 }
+
+/* ---------- Ekran Autorzy / Credits ---------- */
+.credits-screen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 4.5rem 1rem 2.5rem;
+}
+
+.credits-scroll {
+  width: min(680px, 100%);
+  text-align: left;
+}
+
+.credits-content {
+  text-align: left;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.credits-content h1 {
+  margin: 0 0 1.5rem;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+.credits-content h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.3rem;
+  border-bottom: 3px solid var(--fg);
+  padding-bottom: 0.35rem;
+}
+
+.credits-content p {
+  margin: 0 0 1rem;
+}
+
+.credits-content ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  list-style: square;
+}
+
+.credits-content li {
+  margin-bottom: 0.75rem;
+}
+
+.credits-content a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.credits-content a:hover,
+.credits-content a:focus-visible {
+  background: var(--fg);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.credits-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.credits-actions .pixel-button {
+  width: min(260px, 80vw);
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+}

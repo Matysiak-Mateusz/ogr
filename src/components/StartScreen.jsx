@@ -16,6 +16,7 @@ export default function StartScreen({
   canContinue,
   onNewGame,
   onContinue,
+  onCredits,
 }) {
   const { t } = useTranslation();
   const ogre = theme === "light" ? ogreLight : ogreDark;
@@ -37,6 +38,7 @@ export default function StartScreen({
         <PixelButton onClick={onContinue} disabled={!canContinue}>
           {t("continue")}
         </PixelButton>
+        <PixelButton onClick={onCredits}>{t("credits")}</PixelButton>
       </div>
     </div>
   );
