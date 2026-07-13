@@ -23,12 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Puste szablony Vite (nie należą do projektu gry)
-vite-react-empty/
-vite-react-vanilla-empty/
-vite-vanilla-empty/
-
 # Vercel
-.vercel
-
 .vercel
