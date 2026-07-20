@@ -209,29 +209,7 @@ body,
   opacity: 1;
 }
 
-/* Pikselowy szkielet tytułu (widoczny, dopóki czcionka Daydream nie jest gotowa).
-   Obraz ogra nie ma szkieletu — miejsce rezerwuje aspect-ratio, a grafika
-   płynnie pojawia się po załadowaniu (brak kratki prześwitującej przez PNG). */
-.title-skeleton {
-  background-color: var(--bg);
-  background-image:
-    repeating-linear-gradient(90deg, var(--fg) 0 8px, transparent 8px 16px),
-    repeating-linear-gradient(0deg, var(--fg) 0 8px, transparent 8px 16px);
-  background-size: 16px 16px;
-  animation: skeletonPulse 1.1s steps(6, end) infinite;
-}
-
-@keyframes skeletonPulse {
-  0%,
-  100% {
-    opacity: 0.12;
-  }
-  50% {
-    opacity: 0.28;
-  }
-}
-
-/* Tytuł: rezerwacja miejsca + szkielet, dopóki czcionka Daydream nie jest gotowa */
+/* Tytuł na ekranie startowym */
 .title-wrap {
   position: relative;
   margin-top: -1.75rem;
@@ -241,24 +219,12 @@ body,
   justify-content: center;
 }
 
-.title-skeleton {
-  width: min(320px, 68vw);
-  height: 2.4rem;
-  border: 3px solid var(--fg);
-}
-
 .game-title {
   margin: 0;
   font-family: "Daydream", "Departure Mono", monospace;
   font-size: 3.5rem;
   line-height: 1;
   letter-spacing: 0.05em;
-  opacity: 0;
-}
-
-.game-title.is-ready {
-  opacity: 1;
-  transition: opacity 0.3s ease;
 }
 
 .menu {
@@ -460,9 +426,6 @@ body,
     animation: none;
   }
 
-  .title-skeleton {
-    animation: none;
-  }
 }
 
 /* ---------- Ekran Autorzy / Credits ---------- */

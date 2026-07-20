@@ -29,32 +29,12 @@ export default function StartScreen({
 
   const imgRef = useRef(null);
   const [imgLoaded, setImgLoaded] = useState(false);
-  // Czy czcionka tytułu (Daydream) jest już gotowa — jeśli tak (np. cache),
-  // od razu pokazujemy tytuł bez migotania szkieletu.
-  const [fontReady, setFontReady] = useState(() => {
-    try {
-      return document.fonts?.check?.('1rem "Daydream"') ?? true;
-    } catch {
-      return true;
-    }
-  });
 
   // Reset stanu ładowania obrazu przy zmianie motywu (inne źródło).
   // Obrazy z cache mogą być gotowe zanim podłączy się onLoad — sprawdzamy complete.
   useEffect(() => {
     setImgLoaded(Boolean(imgRef.current?.complete));
   }, [ogreSrc]);
-
-  // Czekaj na załadowanie czcionki Daydream, potem odsłoń tytuł (bez skoku układu).
-  useEffect(() => {
-    if (fontReady || !document.fonts?.load) return undefined;
-    let alive = true;
-    const done = () => alive && setFontReady(true);
-    document.fonts.load('1rem "Daydream"').then(done, done);
-    return () => {
-      alive = false;
-    };
-  }, [fontReady]);
 
   return (
     <main className="start-screen">
@@ -79,10 +59,7 @@ export default function StartScreen({
       </div>
 
       <div className="title-wrap">
-        {!fontReady && <span className="title-skeleton" aria-hidden="true" />}
-        <h1 className={`game-title${fontReady ? " is-ready" : ""}`}>
-          {t("title")}
-        </h1>
+        <h1 className="game-title">{t("title")}</h1>
       </div>
 
       <div className="menu">

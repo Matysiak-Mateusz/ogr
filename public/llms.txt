@@ -23,4 +23,3 @@
 - Genre: gamebook / interactive fiction.
 - Tech stack: React and Vite (single-page application) deployed on Vercel.
 - Privacy: the game runs client-side only; player data never leaves the browser.
-

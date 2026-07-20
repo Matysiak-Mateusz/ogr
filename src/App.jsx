@@ -86,7 +86,9 @@ export default function App() {
 
   if (screen === "credits") {
     return (
-      <Suspense fallback={<div className="route-fallback" aria-hidden="true" />}>
+      <Suspense
+        fallback={<div className="route-fallback" aria-hidden="true" />}
+      >
         <CreditsScreen
           onToggleLanguage={toggleLanguage}
           onBack={() => setScreen("start")}
