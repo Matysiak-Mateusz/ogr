@@ -1,34 +1,26 @@
 # Ogr!
 
-> Ogr! to darmowa, dwujęzyczna (polski / angielski) pikselowa gra paragrafowa
-> (interaktywna fikcja) w stylu retro. Gracz wciela się w bohatera, podejmuje
-> decyzje i odkrywa rozgałęzioną, nieliniową historię z wieloma zakończeniami.
-> Aplikacja działa w przeglądarce, zapisuje postęp lokalnie i oferuje jasny oraz
-> ciemny motyw, muzykę w tle i efekt „maszyny do pisania”.
+> Ogr! ("Ogre!") is a free, bilingual (Polish/English) retro pixel-art gamebook — interactive fiction that runs entirely in the browser. The player takes on the role of a hero, makes choices, and explores a branching, non-linear story with multiple endings. Progress is saved locally, and the game offers light/dark themes, background music, and a typewriter text effect.
 
-> Ogr! ("Ogre!") is a free, bilingual (Polish / English) retro pixel-art
-> gamebook (interactive fiction). The player takes on the role of a hero, makes
-> choices and explores a branching, non-linear story with multiple endings. It
-> runs in the browser, saves progress locally and offers light/dark themes,
-> background music and a typewriter text effect.
+## Play
 
-## Informacje o projekcie / Project facts
+- [Play Ogr! online](https://ogr-two.vercel.app): Launch the game in any modern browser; choose "New Game" to start or "Continue" to resume saved progress.
 
-- Nazwa / Name: Ogr!
-- Gatunek / Genre: gra paragrafowa, interaktywna fikcja / gamebook, interactive fiction
-- Języki / Languages: polski (pl), angielski (en)
-- Technologia / Tech: React + Vite (jednostronicowa aplikacja / single-page app)
-- Adres / URL: https://ogr-two.vercel.app
-- Repozytorium / Repository: https://github.com/Matysiak-Mateusz/ogr
+## Project
 
-## Jak grać / How to play
+- [Source code on GitHub](https://github.com/Matysiak-Mateusz/ogr): Public repository containing the React + Vite single-page application.
+- [Sitemap](https://ogr-two.vercel.app/sitemap.xml): XML sitemap listing indexable URLs.
+- [robots.txt](https://ogr-two.vercel.app/robots.txt): Crawler access directives for the site.
 
-- Wejdź na https://ogr-two.vercel.app i wybierz „Nowa Gra”, aby rozpocząć.
-- Czytaj paragrafy i wybieraj opcje, które kierują dalszym przebiegiem historii.
-- Postęp zapisuje się automatycznie — użyj „Kontynuuj”, aby wrócić do gry.
-- Przełączaj język, motyw i muzykę przyciskami w prawym górnym rogu.
+## How it works
 
-## Uwagi / Notes
+- [Bilingual content](https://ogr-two.vercel.app): The entire story and interface are available in Polish and English; the language can be switched in-app at any time.
+- [Local-first saves](https://ogr-two.vercel.app): Progress is stored in the browser's local storage, so no account or installation is required.
+- [Retro presentation](https://ogr-two.vercel.app): Pixel-art visuals, monospace typography, and a typewriter reveal for the narrative text.
 
-- Cała treść (fabuła i interfejs) dostępna jest w dwóch językach.
-- Gra nie wymaga logowania ani instalacji; dane pozostają w przeglądarce gracza.
+## Notes
+
+- Genre: gamebook / interactive fiction.
+- Tech stack: React and Vite (single-page application) deployed on Vercel.
+- Privacy: the game runs client-side only; player data never leaves the browser.
+

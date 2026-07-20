@@ -65,7 +65,6 @@ export default function StartScreen({
       </div>
 
       <div className={`ogre-wrap${imgLoaded ? " is-loaded" : ""}`}>
-        <div className="ogre-skeleton" aria-hidden="true" />
         <img
           ref={imgRef}
           className="ogre-image"

@@ -22,6 +22,14 @@
       name="description"
       content="Ogr! – dwujęzyczna (PL/EN) pikselowa gra paragrafowa. Wciel się w bohatera, podejmuj decyzje i odkrywaj rozgałęzioną historię w retro stylu."
     />
+    <!-- Wczesne pobranie czcionki tekstu (body) — skraca ścieżkę krytyczną i przyspiesza FCP -->
+    <link
+      rel="preload"
+      href="/fonts/DepartureMono.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <!-- Wczesne pobranie obrazu LCP (domyślny, jasny motyw), aby przyspieszyć renderowanie -->
     <link
       rel="preload"
