@@ -1,8 +1,8 @@
-import "@hackernoon/pixel-icon-library/fonts/iconfont.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./i18n.js";
+import "./iconfont.css";
 import "./styles.css";
 
 createRoot(document.getElementById("root")).render(

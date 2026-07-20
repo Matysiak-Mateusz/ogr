@@ -58,7 +58,10 @@ const WORDS = [
 // Lookbehind (?<![\p{L}]) zapewnia, że przed słowem nie stoi żadna litera,
 // dzięki czemu poprawnie obsługujemy też sąsiadujące spójniki.
 const singleRegExp = /(?<![\p{L}])([aiouwz]) /giu;
-const wordsRegExp = new RegExp("(?<![\\p{L}])(" + WORDS.join("|") + ") ", "giu");
+const wordsRegExp = new RegExp(
+  "(?<![\\p{L}])(" + WORDS.join("|") + ") ",
+  "giu",
+);
 
 export function fixOrphans(text) {
   if (typeof text !== "string" || text.length === 0) return text;

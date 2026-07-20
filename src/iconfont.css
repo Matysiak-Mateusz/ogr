@@ -1,0 +1,37 @@
+/* Minimalny zestaw ikon pikselowych (@hackernoon/pixel-icon-library).
+   Zamiast importować pełną paczkę (~500 klas + font-display: auto/block),
+   ładujemy tylko czcionkę z font-display: swap i 4 faktycznie używane ikony.
+   Dzięki temu tekst/ikony są od razu widoczne (lepszy FCP) i mniejszy CSS. */
+@font-face {
+  font-family: "iconfont";
+  src:
+    url("./assets/fonts/iconfont.woff2") format("woff2"),
+    url("./assets/fonts/iconfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.hn {
+  line-height: 1;
+}
+
+.hn::before {
+  font-family: iconfont !important;
+  font-style: normal;
+  font-weight: normal !important;
+  vertical-align: top;
+}
+
+.hn-sound-mute::before {
+  content: "\f221";
+}
+.hn-sound-on::before {
+  content: "\f222";
+}
+.hn-star-crescent::before {
+  content: "\f226";
+}
+.hn-sun::before {
+  content: "\f229";
+}

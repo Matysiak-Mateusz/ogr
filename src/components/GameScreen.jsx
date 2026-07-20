@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { getMusicKey } from "../audio/musicMap.js";
+import { useGameMusic } from "../audio/useGameMusic.js";
 import LanguageToggle from "./LanguageToggle.jsx";
 import MusicToggle from "./MusicToggle.jsx";
 import PixelButton from "./PixelButton.jsx";
@@ -33,6 +35,14 @@ export default function GameScreen({
   const scrollRef = useRef(null);
   const timerRef = useRef(null);
   const revealTimerRef = useRef(null);
+
+  // Muzyka gra tylko na ekranie gry (ten komponent renderuje się wyłącznie w grze).
+  // Autoplay odblokowany, bo wchodzimy tu po kliknięciu "Nowa Gra" / "Kontynuuj".
+  useGameMusic({
+    musicKey: getMusicKey(paragraph.id),
+    enabled: true,
+    muted: musicMuted,
+  });
 
   const isEnd = paragraph.type === "end";
 
@@ -166,7 +176,7 @@ export default function GameScreen({
   }
 
   return (
-    <div className="game-screen" onClick={handleSkip}>
+    <main className="game-screen" onClick={handleSkip}>
       <div className="top-bar" onClick={(e) => e.stopPropagation()}>
         <ThemeToggle theme={theme} onToggle={onToggleTheme} />
         <MusicToggle muted={musicMuted} onToggle={onToggleMusic} />
@@ -228,6 +238,6 @@ export default function GameScreen({
           )}
         </div>
       </PixelFrame>
-    </div>
+    </main>
   );
 }

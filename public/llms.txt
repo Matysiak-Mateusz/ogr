@@ -1,0 +1,34 @@
+# Ogr!
+
+> Ogr! to darmowa, dwujęzyczna (polski / angielski) pikselowa gra paragrafowa
+> (interaktywna fikcja) w stylu retro. Gracz wciela się w bohatera, podejmuje
+> decyzje i odkrywa rozgałęzioną, nieliniową historię z wieloma zakończeniami.
+> Aplikacja działa w przeglądarce, zapisuje postęp lokalnie i oferuje jasny oraz
+> ciemny motyw, muzykę w tle i efekt „maszyny do pisania”.
+
+> Ogr! ("Ogre!") is a free, bilingual (Polish / English) retro pixel-art
+> gamebook (interactive fiction). The player takes on the role of a hero, makes
+> choices and explores a branching, non-linear story with multiple endings. It
+> runs in the browser, saves progress locally and offers light/dark themes,
+> background music and a typewriter text effect.
+
+## Informacje o projekcie / Project facts
+
+- Nazwa / Name: Ogr!
+- Gatunek / Genre: gra paragrafowa, interaktywna fikcja / gamebook, interactive fiction
+- Języki / Languages: polski (pl), angielski (en)
+- Technologia / Tech: React + Vite (jednostronicowa aplikacja / single-page app)
+- Adres / URL: https://ogr-two.vercel.app
+- Repozytorium / Repository: https://github.com/Matysiak-Mateusz/ogr
+
+## Jak grać / How to play
+
+- Wejdź na https://ogr-two.vercel.app i wybierz „Nowa Gra”, aby rozpocząć.
+- Czytaj paragrafy i wybieraj opcje, które kierują dalszym przebiegiem historii.
+- Postęp zapisuje się automatycznie — użyj „Kontynuuj”, aby wrócić do gry.
+- Przełączaj język, motyw i muzykę przyciskami w prawym górnym rogu.
+
+## Uwagi / Notes
+
+- Cała treść (fabuła i interfejs) dostępna jest w dwóch językach.
+- Gra nie wymaga logowania ani instalacji; dane pozostają w przeglądarce gracza.

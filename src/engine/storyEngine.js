@@ -6,9 +6,9 @@
 // pozostają poprawne po zmianie języka.
 //   { id, text, choices: [{ text, target }], type: 'choices'|'continue'|'end', next }
 
-import { fixOrphans } from "../utils/orphans.js";
 import ogrPlRaw from "../content/ogr.md?raw";
 import ogrEnRaw from "../content/ogr_en.md?raw";
+import { fixOrphans } from "../utils/orphans.js";
 import { parseOgrMarkdown } from "./parseOgrMarkdown.js";
 
 // `transform` pozwala przetworzyć tekst paragrafów i wyborów (np. wersja

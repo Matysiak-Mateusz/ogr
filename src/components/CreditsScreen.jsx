@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { fixOrphans } from "../utils/orphans.js";
 import LanguageToggle from "./LanguageToggle.jsx";
 import PixelButton from "./PixelButton.jsx";
-import { fixOrphans } from "../utils/orphans.js";
 
 // Link zewnętrzny otwierany w nowej karcie (bezpiecznie: noopener/noreferrer).
 function Ext({ href, children }) {
@@ -48,7 +48,9 @@ function CreditsPl() {
         pomocą narzędzia <Ext href="https://wigglypaint.com/">WigglyPaint</Ext>.
       </p>
 
-      <p>W projekcie wykorzystano poniższe utwory muzyczne, fonty oraz ikony:</p>
+      <p>
+        W projekcie wykorzystano poniższe utwory muzyczne, fonty oraz ikony:
+      </p>
 
       <h2>Ikony</h2>
       <ul>
@@ -177,7 +179,8 @@ function CreditsPl() {
             </Ext>
           </strong>{" "}
           — utwór skomponowany przez Jesúsa Lastrę, występującego również pod
-          nazwą <Ext href="https://opengameart.org/users/jalastram">jalastram</Ext>.
+          nazwą{" "}
+          <Ext href="https://opengameart.org/users/jalastram">jalastram</Ext>.
           Udostępniony na licencji{" "}
           <Ext href="https://creativecommons.org/licenses/by/3.0/">
             CC BY 3.0
@@ -231,7 +234,9 @@ function CreditsEn() {
         <Ext href="https://wigglypaint.com/">WigglyPaint</Ext>.
       </p>
 
-      <p>The following music tracks, fonts, and icons were used in this project:</p>
+      <p>
+        The following music tracks, fonts, and icons were used in this project:
+      </p>
 
       <h2>Icons</h2>
       <ul>
@@ -391,7 +396,7 @@ export default function CreditsScreen({ onToggleLanguage, onBack }) {
     if (!isPl || !contentRef.current) return;
     const walker = document.createTreeWalker(
       contentRef.current,
-      NodeFilter.SHOW_TEXT
+      NodeFilter.SHOW_TEXT,
     );
     let node = walker.nextNode();
     while (node) {
@@ -402,7 +407,7 @@ export default function CreditsScreen({ onToggleLanguage, onBack }) {
   }, [isPl]);
 
   return (
-    <div className="credits-screen">
+    <main className="credits-screen">
       <div className="top-bar">
         <LanguageToggle onToggle={onToggleLanguage} />
       </div>
@@ -415,6 +420,6 @@ export default function CreditsScreen({ onToggleLanguage, onBack }) {
           <PixelButton onClick={onBack}>{t("back")}</PixelButton>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

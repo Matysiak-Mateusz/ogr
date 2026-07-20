@@ -1,9 +1,5 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { getMusicKey } from "./audio/musicMap.js";
-import { useGameMusic } from "./audio/useGameMusic.js";
-import CreditsScreen from "./components/CreditsScreen.jsx";
-import GameScreen from "./components/GameScreen.jsx";
 import StartScreen from "./components/StartScreen.jsx";
 import {
   hasSave,
@@ -15,6 +11,11 @@ import {
   saveTheme,
 } from "./engine/storage.js";
 import { getStory } from "./engine/storyEngine.js";
+
+// Ekrany gry i autorów ładowane leniwie — nie obciążają startowego bundla
+// (m.in. howler trafia do osobnego chunku i pobiera się dopiero w grze).
+const GameScreen = lazy(() => import("./components/GameScreen.jsx"));
+const CreditsScreen = lazy(() => import("./components/CreditsScreen.jsx"));
 
 export default function App() {
   const { i18n } = useTranslation();
@@ -28,15 +29,6 @@ export default function App() {
   );
   const [canContinue, setCanContinue] = useState(() => hasSave());
   const [musicMuted, setMusicMuted] = useState(() => loadMusicMuted());
-
-  // Muzyka gra wyłącznie w trakcie rozgrywki (ekran 'game'), nigdy w menu.
-  // Autoplay jest odblokowany, bo do 'game' wchodzimy tylko po kliknięciu
-  // "Nowa Gra" / "Kontynuuj".
-  useGameMusic({
-    musicKey: getMusicKey(currentId),
-    enabled: screen === "game",
-    muted: musicMuted,
-  });
 
   // Motyw sterowany atrybutem data-theme na <body>.
   useEffect(() => {
@@ -94,10 +86,12 @@ export default function App() {
 
   if (screen === "credits") {
     return (
-      <CreditsScreen
-        onToggleLanguage={toggleLanguage}
-        onBack={() => setScreen("start")}
-      />
+      <Suspense fallback={<div className="route-fallback" aria-hidden="true" />}>
+        <CreditsScreen
+          onToggleLanguage={toggleLanguage}
+          onBack={() => setScreen("start")}
+        />
+      </Suspense>
     );
   }
 
@@ -121,16 +115,18 @@ export default function App() {
     story.getParagraph(currentId) || story.getParagraph(story.startId);
 
   return (
-    <GameScreen
-      paragraph={paragraph}
-      theme={theme}
-      onToggleTheme={toggleTheme}
-      musicMuted={musicMuted}
-      onToggleMusic={toggleMusic}
-      onToggleLanguage={toggleLanguage}
-      onChoose={goToParagraph}
-      onEndNewGame={startNewGame}
-      onBackToMenu={backToMenu}
-    />
+    <Suspense fallback={<div className="route-fallback" aria-hidden="true" />}>
+      <GameScreen
+        paragraph={paragraph}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        musicMuted={musicMuted}
+        onToggleMusic={toggleMusic}
+        onToggleLanguage={toggleLanguage}
+        onChoose={goToParagraph}
+        onEndNewGame={startNewGame}
+        onBackToMenu={backToMenu}
+      />
+    </Suspense>
   );
 }
