@@ -12,7 +12,7 @@
 	<img alt="License CC BY-SA 4.0" src="https://img.shields.io/badge/Story-CC%20BY--SA%204.0-4c1?style=for-the-badge" />
 </p>
 
-Pixel-art, bilingual (PL/EN) interactive gamebook built with React + Vite.
+Retro, bilingual (PL/EN) interactive gamebook built with React + Vite.
 You race through a dangerous forest to bring a healing potion home, while every decision changes your route and ending.
 
 Live demo: https://ogr-two.vercel.app
@@ -21,17 +21,16 @@ Live demo: https://ogr-two.vercel.app
 
 ## Polski
 
-Dwujęzyczna (PL/EN) gra paragrafowa w klimacie pixel-art.
+Dwujęzyczna (PL/EN) gra paragrafowa w klimacie retro.
 Prowadzisz bohatera przez las, by zdążyć z miksturą uzdrawiającą dla chorej siostry, a na drodze staje ogr.
 
 ### Najważniejsze funkcje
 
 - Ponad 160 paragrafów i wiele zakończeń
 - Przełącznik języka PL/EN z obsługą i18next
-- Motyw jasny/ciemny, zapis preferencji i obsługa osadzenia (embed)
+- Motyw jasny/ciemny, zapis preferencji
 - Muzyka tła z możliwością wyciszenia
 - Własny parser markdown i silnik historii
-- Dbałość o dostępność: focus-visible, większe cele dotykowe, prefers-reduced-motion
 
 ### Uruchomienie lokalne
 
@@ -51,7 +50,7 @@ npm run preview
 
 ## English
 
-A bilingual (PL/EN) pixel-art interactive gamebook.
+A bilingual (PL/EN) retro-looking interactive gamebook.
 You guide the protagonist through a hostile forest to save their sister, while choices affect pacing, inventory, and ending paths.
 
 ### Key features
@@ -61,7 +60,7 @@ You guide the protagonist through a hostile forest to save their sister, while c
 - Light/dark themes with persisted preferences and embed support
 - Background music with mute control
 - Custom markdown parser and story engine
-- Accessibility-minded UI: focus-visible, touch targets, prefers-reduced-motion
+- Accessibility-minded UI
 
 ### Local setup
 
