@@ -16,6 +16,7 @@ Retro, bilingual (PL/EN) interactive gamebook built with React + Vite.
 You race through a dangerous forest to bring a healing potion home, while every decision changes your route and ending.
 
 Live demo: https://ogr-two.vercel.app
+Itch.io: https://matysiak-mateusz.itch.io/ogre
 
 ---
 
