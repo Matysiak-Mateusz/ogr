@@ -1,4 +1,4 @@
-# Ogr! — Interactive Gamebook
+# Ogre! — Interactive Gamebook
 
 <p align="center">
 	<img src="./public/logo.gif" alt="Ogr! logo" width="320" />
