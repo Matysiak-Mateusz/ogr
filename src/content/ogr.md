@@ -12,27 +12,27 @@ Biegłeś leśną ścieżką przez dwie godziny. Nagle słyszysz, jak gałęzie 
 Co robisz?
 
 ```
-➢ Wróć tą samą ścieżką na południe, starając się nie zrobić hałasu: przejdź do 2.
+➢ Wróć tą samą ścieżką na południe, starając się nie narobić hałasu: przejdź do 2.
 ➢ Wespnij się na sosnę za sobą, aby lepiej się rozejrzeć: przejdź do 4.
 ➢ Poczekaj, aż to, czymkolwiek to jest, podejdzie bliżej: przejdź do 6.
 ```
 
 # 2:
 
-Gdy szybko odwracasz się, by pobiec z powrotem wzdłuż ścieżki, potykasz się o gruby korzeń i upadasz obok ścieżki prosto w igliwie, rzemień przy pasku się rwie, a twój miecz schowany w pochwie ląduje na ziemi. Spoglądając za siebie, widzisz wysoko małą głowę, wystającą spośród gałęzi.
+Gdy szybko odwracasz się, by pobiec z powrotem wzdłuż ścieżki, potykasz się o gruby korzeń i upadasz obok ścieżki prosto w igliwie, rzemień przy twoim pasku się rwie, a twój miecz schowany w pochwie ląduje na ziemi. Spoglądając za siebie, widzisz wysoko w górze małą głowę, wystającą spośród gałęzi.
 
 Co robisz?
 
 ```
 ➢ Schowaj się w krzaki i pozostań w bezruchu: przejdź do 3.
 ➢ Chwyć pochwę, wyciągnij miecz i stań w gotowości: przejdź do 6.
-➢ Porzuć miecz, wyskocz i biegnij na południe wzdłuż ścieżki: przejdź do 10.
+➢ Porzuć miecz, podnieś się i biegnij na południe wzdłuż ścieżki: przejdź do 10.
 ```
 
 # 3 :
 
-Słyszysz, jak stworzenie zbliża się, poruszając się szybko wśród podszytu. Nagle mała główka, zawieszona wysoko, wychyla się spośród drzew, zatrzymując tuż przed ścieżką. Wyraźnie jest to duże stworzenie,
-na oko trzy metry wzrostu. Wącha powietrze, a potem patrzy prosto na ciebie. Jego oczy się rozszerzają, i wkracza na ścieżkę. To monstrualny nagi humanoid, z nieproporcjonalnie małą głową. W jednej ręce trzyma kawałek pnia drzewa, tak jak maczugę.
+Słyszysz, jak stworzenie zbliża się, poruszając się szybko wśród podszytu. Nagle mała główka, zawieszona wysoko, wychyla się spośród drzew, zatrzymując się tuż przed ścieżką. Wyraźnie jest to duże stworzenie,
+na oko ma ze trzy metry wzrostu. Wącha nosem w powietrzu, a potem patrzy prosto na ciebie. Jego oczy się rozszerzają, i wkracza na ścieżkę. To monstrualny nagi humanoid, z nieproporcjonalnie małą głową. W jednej ręce trzyma kawałek pnia drzewa, tak jak maczugę.
 
 Co robisz?
 
@@ -45,17 +45,17 @@ Co robisz?
 # 4 :
 
 Wspinając się na sosnę, podciągasz się na gruby konar. Twoje ręce są lepkie od żywicy iglaka, a przyjemny aromat sosny niemal usypia cię w poczuciu komfortu. Ale widzisz ruch
-wśród sosen i nie możesz odgadnąć, co to jest. Gdy porusza się bliżej, widzisz, że to
-monstrualnie duża istota, być może o wysokości około trzech metrów, ale z małą nieproporcjonalną głową. Ogr! Niesie
+wśród sosen i nie możesz odgadnąć, co to jest. Gdy podchodzi bliżej, widzisz, że to
+monstrualnie duża istota, może mieć około trzech metrów, ale z małą nieproporcjonalną głową. Ogr! Niesie
 przy boku kawałek pnia drzewa, niczym maczugę.
 
 Zastanów się:
 
 ```
-➢ Co się tu ostatnio wydarzyło? przejdź do 5.
-➢ Co zaraz się wydarzy? przejdź do 7.
+➢ Co się tu ostatnio mogło wydarzyć? przejdź do 5.
+➢ Co zaraz może się wydarzyć? przejdź do 7.
 ➢ Na co powinienem uważać? przejdź do 9.
-➢ Co tutaj może być dla mnie użyteczne? przejdź do 11.
+➢ Co tutaj może okazać się dla mnie użyteczne albo przydatne? przejdź do 11.
 ➢ Kto ma tutaj przewagę? przejdź do 13.
 ➢ Co tutaj nie jest tym, czym się wydaje? przejdź do 15.
 ```
@@ -78,7 +78,7 @@ Co robisz?
 
 # 6 :
 
-Wyraźnie jest to ogromna istota, ma może z trzy metry wzrostu, tylko jej mała głowa wystaje ponad gałęzie sosen. Wciąga powietrze nosem, a potem patrzy prosto na ciebie. Jej oczy się rozszerzają i kroczy w stronę ścieżki. To monstrualny nagi humanoid, z nieproporcjonalnie małym łbem. W jednej ręce trzyma kawałek pnia drzewa, niczym maczugę, którą zaczyna wymachiwać przed sobą jak sierpem.
+Wyraźnie jest to ogromna istota, ma może z trzy metry wzrostu, tylko jej mała głowa wystaje ponad gałęzie sosen. Wciąga powietrze nosem, a potem patrzy prosto na ciebie. Jej oczy się rozszerzają i kroczy w stronę ścieżki. To monstrualny nagi humanoid, o nieproporcjonalnie małym łbie. W jednej ręce trzyma kawałek pnia drzewa, niczym maczugę, którą zaczyna wymachiwać przed sobą jak sierpem.
 
 Co robisz?
 
@@ -100,9 +100,9 @@ Co robisz?
 
 # 8 :
 
-To wyraźnie Ogr. Głowa jest ludzka, ponieważ ogry niegdyś były ludźmi, którzy skryli się w głębokich lasach. To tam zaczęli nienawidzić swoich przodków. Na wzgórzach nad lasami budowali prymitywne kamienne ołtarze i składali w ofierze jelenie i niedźwiedzie mrocznym bogom, aż nabrali krzepy i postury, ale nie rozumu. Później zaczęli również składać w ofierze swoim mrocznym bogom ludzi — którymi sami niegdyś byli.
+To wyraźnie Ogr. Głowa ma ludzki wygląd, ponieważ ogry niegdyś były ludźmi, którzy skryli się w głębokich lasach. To tam zaczęli nienawidzić swoich przodków. Na wzgórzach nad lasami budowali prymitywne kamienne ołtarze i składali w ofierze jelenie i niedźwiedzie mrocznym bogom, aż nabrali krzepy i postury, ale nie rozumu. Później zaczęli również składać w ofierze swoim mrocznym bogom ludzi — którymi sami niegdyś byli.
 
-Wiesz o tym ponieważ wyciągnąłeś to z fragmentów piosenek, które bardowie śpiewali po tawernach.
+Wiesz o tym, ponieważ usłyszałeś to w fragmentach pieśni, które bardowie śpiewali po tawernach.
 
 Co robisz?
 
@@ -113,24 +113,24 @@ Co robisz?
 
 # 9 :
 
-Małogłowe stworzenie ma duże uszy i szerokie nozdrza, ale błyszczące małe ślepia. Bardziej prawdopodobne, że szybciej cię usłyszy lub powącha niż zobaczy, siedzącego wysoko na tym drzewie.
+Małogłowe stworzenie ma duże uszy i szerokie nozdrza, oraz błyszczące małe ślepia. Bardziej prawdopodobne, że szybciej cię usłyszy lub wywęszy niż zobaczy, siedzącego wysoko na tym drzewie.
 
 Co robisz?
 
 ```
-➢ Rzuć szyszki daleko w las, żeby zwrócić uwagę potwora: przejdź do 23.
-➢ Stań nieruchomo w nadziei, że nie odkryje, gdzie jesteś: przejdź do 37.
+➢ Rzuć szyszki daleko w las, żeby odwrócić uwagę potwora: przejdź do 23.
+➢ Stań nieruchomo w nadziei, że nie odkryje, gdzie się znajdujesz: przejdź do 37.
 ```
 
 # 10 :
 
-Pędzisz w dół ścieżki tak szybko i cicho, jak potrafisz. Na szczęście ścieżka się zakręca i wije, jesteś już poza zasięgiem wzroku stworzenia. Nie słyszysz, żeby ktoś cię śledził.
+Pędzisz w dół ścieżki tak szybko i cicho, jak potrafisz. Na szczęście ścieżka się zakręca i wije; jesteś już poza zasięgiem wzroku stworzenia. Nie słyszysz, żeby ktoś cię śledził.
 
 Co chcesz zrobić?
 
 ```
 ➢ Ukryj się na szlaku na chwilę, a potem wróć po swój miecz: przejdź do 16.
-➢ Cofnij się tą samą ścieżką, mając nadzieję, że ogr już odszedł: przejdź do 31.
+➢ Cofnij się tą samą ścieżką, mając nadzieję, że ogr już dawno odszedł: przejdź do 31.
 ➢ Spróbuj przebić się przez las w kierunku domu, ryzykując zgubieniem się: przejdź do 38.
 ```
 
@@ -151,9 +151,9 @@ Co chcesz zrobić?
 Wybierz jedną opcję:
 
 ```
-➢ Rusz się, aby wykonać strzał, narażając się na wcześniejsze zauważenie: przejdź do 17.
+➢ Wyprostuj się, aby wykonać strzał, narażając się na wcześniejsze zauważenie: przejdź do 17.
 ➢ Wykonaj strzał w takiej pozycji jakiej jesteś: przejdź do 39.
-➢ Wykonaj kilka szybkich strzałów (używając swoich ostatnich strzał): przejdź do 77.
+➢ Wykonaj kilka szybkich strzałów (zużywając swoje ostatnie strzały): przejdź do 77.
 ```
 
 # 13 :
@@ -171,8 +171,8 @@ Co robisz?
 
 „Witaj” – mówisz – „nie zwracaj na mnie uwagi. Po prostu spaceruję sobie po lesie. Za chwilę zniknę ci z drogi”.
 
-„Płaci myto,” mówi stworzenie ochrypłym głosem, co jest zaskakujące jak na jego rozmiar. Jego oczy są czerwone.
-Próbujesz zastanowić się, co masz przy sobie, co mogłoby zainteresować to stworzenie. Twoja zbroja jest dla niego za mała,
+„Płaci myto,” mówi stworzenie ochrypłym głosem, zaskakująco łagodnym jak na jego rozmiary. Jego oczy są zaczerwienione.
+Próbujesz zastanowić się, co masz przy sobie, co mogłoby zainteresować stwora. Twoja zbroja jest dla niego za mała,
 żeby mógł ją założyć. Twój miecz byłby dla niego jak nóż. W sumie masz ze sobą:
 
 - Racje żywnościowe
@@ -197,7 +197,7 @@ Nic nie jest tym, czym się wydaje?!
 
 To wielki straszny potwór z wielkim przerażającym kijem, dreptający przez las w poszukiwaniu głów do roztrzaskania.
 
-W rzeczywistości jego oczy są czerwone i wygląda na to, że płakał?
+W rzeczywistości jego oczy są zaczerwienione i wygląda na to, że płakał.
 
 Co chcesz zrobić?
 
@@ -268,6 +268,20 @@ Ogr wyciąga wielką łapę i czeka na dar. Nie wygląda na cierpliwego.
 ➢ Zużyty łuk: przejdź do 20.7.
 ➢ Kołczan strzał: przejdź do 20.8.
 
+# 20.0 :
+
+Wybierz przedmiot, który chcesz oddać ogrowi.
+
+Ogr wyciąga wielką łapę i czeka na dar. Nie wygląda na cierpliwego.
+
+➢ Racje żywnościowe: przejdź do 20.1.
+➢ Sprzęt podróżny: przejdź do 20.2.
+➢ Mikstura leczenia: przejdź do 20.3.
+➢ 3 monety: przejdź do 20.5.
+➢ Krótki miecz: przejdź do 20.6.
+➢ Zużyty łuk: przejdź do 20.7.
+➢ Kołczan strzał: przejdź do 20.8.
+
 # 20.1 : Racje żywnościowe
 
 Ogr bierze racje żywnościowe i przez chwilę obraca je w palcach. Wącha je, marszczy nos, po czym spogląda na ciebie z wyraźnym niezadowoleniem.
@@ -302,7 +316,7 @@ Wyciąga drugą łapę i warczy:
 
 Musisz oddać jeszcze jeden przedmiot.
 
-Wróć do 20.
+Przejdź do 20.0.
 
 # 20.5 : 3 monety
 
@@ -370,7 +384,7 @@ Co robisz?
 
 Co robisz?
 
-➢ Schodzisz w pośpiechu, ryzykując, że stracisz chwyt i spadniesz z reszty wysokości: przejdź do 30.
+➢ Schodzisz w pośpiechu, ryzykując, że stracisz chwyt i spadniesz z wysokości: przejdź do 30.
 
 ➢ Schodzisz bardzo ostrożnie, ale przez to dajesz ogrowi czas, by cię wywęszył i podszedł bliżej: przejdź do 48.
 
@@ -412,7 +426,7 @@ Co robisz?
 
 ➢ Atakujesz bez wahania: przejdź do 33.
 
-➢ Próbujesz uniknąć kolejnego ciosu i podejść bliżej ogra: przejdź do 50.
+➢ Próbujesz uniknąć kolejnego ciosu i zbliżyć się do ogra: przejdź do 50.
 
 # 26 :
 
@@ -444,7 +458,7 @@ Przejdź do 81.
 
 Drżącą ręką wyciągasz przed siebie przedmiot, który próbujesz oddać ogrowi jako opłatę za przejście.
 
-Stwór zamachuje się swoją maczugą z pnia drzewa i uderza cię z ogromną siłą. Padając na ziemię, czujesz przeszywający ból. Oddany przedmiot wypada ci z dłoni, a ręka, którą trzymasz miecz, zostaje boleśnie zraniona.
+Stwór zamachuje się swoją maczugą z pnia drzewa i uderza cię z ogromną siłą. Padając na ziemię, czujesz przeszywający ból. Przedmiot który oferowałeś wypada ci z dłoni, a ręka, którą trzymasz miecz, zostaje boleśnie zraniona.
 
 — To nie dobra opłata! — ryczy ogr ze złością. — Wszystko mi daj!
 
@@ -470,7 +484,7 @@ Co robisz?
 
 # 30 :
 
-Spieszysz się tak bardzo, że tracisz oparcie i spadasz z reszty wysokości. Obijasz się o gałęzie, zanim ciężko uderzasz o ziemię.
+Spieszysz się tak bardzo, że tracisz oparcie i spadasz z dużej wysokości. Obijasz się o gałęzie, zanim ciężko uderzasz o ziemię.
 
 Przez chwilę leżysz oszołomiony, próbując złapać oddech.
 
@@ -1465,7 +1479,7 @@ Biegniesz ścieżką, z każdą chwilą coraz bardziej zmęczony. Wybiegasz z la
 
 Żeby zmniejszyć ciężar, po drodze porzucasz resztę swoich rzeczy, zostawiając sobie tylko miksturę leczenia.
 
-Odkupienie wszystkiego zajmie dużo czasu, ale co możesz zrobić? Twoja siostra jest o wiele ważniejsza.
+Odzyskanie wszystkiego zajmie dużo czasu, ale co możesz zrobić? Twoja siostra jest o wiele ważniejsza.
 
 Docierasz do rodzinnej chaty, kiedy gasnące światło dnia barwi pola na czerwono.
 
@@ -1639,7 +1653,7 @@ Ogr bierze je od ciebie, po czym rzuca na ziemię.
 
 Nagle potwór rusza na ciebie z zaskakującą szybkością.
 
-— Ciebie też jej ofiaruję.
+— Ciebie też jej dać.
 
 Ogr zamachuje się maczugą prosto na ciebie.
 
@@ -1711,7 +1725,7 @@ Co robisz?
 
 # 114 :
 
-— Nie wątpię, że możesz zabrać wszystko, co mam — mówisz. — Ale zanim zginę, sprawię, że poczujesz ból.
+— Bez wątpienia możesz zabrać wszystko, co mam — mówisz. — Ale zanim zginę, sprawię, że poczujesz ból.
 
 Dobywasz miecza i machasz nim groźnie.
 

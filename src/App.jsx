@@ -17,6 +17,9 @@ import { getStory } from "./engine/storyEngine.js";
 const GameScreen = lazy(() => import("./components/GameScreen.jsx"));
 const CreditsScreen = lazy(() => import("./components/CreditsScreen.jsx"));
 
+const MORE_TOLL_TARGETS = new Set(["20.4", "20.6", "20.7"]);
+const TOLL_CHOICE_PARAGRAPHS = new Set(["20", "20.0"]);
+
 export default function App() {
   const { i18n } = useTranslation();
   const lang = i18n.language?.startsWith("pl") ? "pl" : "en";
@@ -26,6 +29,9 @@ export default function App() {
   const [screen, setScreen] = useState("start"); // 'start' | 'game' | 'credits'
   const [currentId, setCurrentId] = useState(
     () => loadSave()?.currentParagraphId || story.startId,
+  );
+  const [hiddenTollChoiceTargets, setHiddenTollChoiceTargets] = useState(
+    () => loadSave()?.hiddenTollChoiceTargets || {},
   );
   const [canContinue, setCanContinue] = useState(() => hasSave());
   const [musicMuted, setMusicMuted] = useState(() => loadMusicMuted());
@@ -60,22 +66,37 @@ export default function App() {
   function startNewGame() {
     const id = story.startId;
     setCurrentId(id);
-    saveProgress(id); // "Nowa Gra" nadpisuje zapis startem
+    setHiddenTollChoiceTargets({});
+    saveProgress(id, {}); // "Nowa Gra" nadpisuje zapis startem
     setCanContinue(true);
     setScreen("game");
   }
 
   function continueGame() {
-    const saved = loadSave()?.currentParagraphId;
+    const save = loadSave();
+    const saved = save?.currentParagraphId;
     const id = story.has(saved) ? saved : story.startId;
+    setHiddenTollChoiceTargets(save?.hiddenTollChoiceTargets || {});
     setCurrentId(id);
     setScreen("game");
   }
 
   function goToParagraph(id) {
     if (!story.has(id)) return;
+    const isTollChoiceParagraph = TOLL_CHOICE_PARAGRAPHS.has(currentId);
+    const shouldHideChoice =
+      isTollChoiceParagraph && MORE_TOLL_TARGETS.has(id);
+
+    const nextHiddenTargets = shouldHideChoice
+      ? { ...hiddenTollChoiceTargets, [id]: true }
+      : hiddenTollChoiceTargets;
+
+    if (shouldHideChoice) {
+      setHiddenTollChoiceTargets(nextHiddenTargets);
+    }
+
     setCurrentId(id);
-    saveProgress(id);
+    saveProgress(id, nextHiddenTargets);
     setCanContinue(true);
   }
 
@@ -113,8 +134,18 @@ export default function App() {
     );
   }
 
-  const paragraph =
+  const sourceParagraph =
     story.getParagraph(currentId) || story.getParagraph(story.startId);
+
+  const paragraph =
+    sourceParagraph && TOLL_CHOICE_PARAGRAPHS.has(sourceParagraph.id)
+      ? {
+          ...sourceParagraph,
+          choices: sourceParagraph.choices.filter(
+            (choice) => !hiddenTollChoiceTargets[choice.target],
+          ),
+        }
+      : sourceParagraph;
 
   return (
     <Suspense fallback={<div className="route-fallback" aria-hidden="true" />}>

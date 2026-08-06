@@ -260,6 +260,20 @@ The ogre stretches out its huge hand and waits for the gift. It does not look pa
 ➢ Worn bow: go to 20.7.
 ➢ Quiver of arrows: go to 20.8.
 
+# 20.0 :
+
+Choose the item you wish to give the ogre.
+
+The ogre stretches out its huge hand and waits for the gift. It does not look patient.
+
+➢ Rations: go to 20.1.
+➢ Adventuring gear: go to 20.2.
+➢ Healing potion: go to 20.3.
+➢ 3 coins: go to 20.5.
+➢ Short sword: go to 20.6.
+➢ Worn bow: go to 20.7.
+➢ Quiver of arrows: go to 20.8.
+
 # 20.1 : Rations
 
 The ogre takes the rations and turns them over in its fingers for a moment. It sniffs them, wrinkles its nose, then glares at you with obvious displeasure.
@@ -294,7 +308,7 @@ It stretches out its other hand and growls:
 
 You must give up another item.
 
-Go back to 20.
+Go to 20.0.
 
 # 20.5 : 3 coins
 

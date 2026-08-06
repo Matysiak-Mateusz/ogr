@@ -9,17 +9,26 @@ export const STORAGE_KEYS = {
 export function loadSave() {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.save);
-    return raw ? JSON.parse(raw) : null;
+    const parsed = raw ? JSON.parse(raw) : null;
+    if (!parsed || typeof parsed !== "object") return null;
+    return {
+      currentParagraphId: parsed.currentParagraphId || null,
+      hiddenTollChoiceTargets:
+        parsed.hiddenTollChoiceTargets &&
+        typeof parsed.hiddenTollChoiceTargets === "object"
+          ? parsed.hiddenTollChoiceTargets
+          : {},
+    };
   } catch {
     return null;
   }
 }
 
-export function saveProgress(currentParagraphId) {
+export function saveProgress(currentParagraphId, hiddenTollChoiceTargets = {}) {
   try {
     localStorage.setItem(
       STORAGE_KEYS.save,
-      JSON.stringify({ currentParagraphId }),
+      JSON.stringify({ currentParagraphId, hiddenTollChoiceTargets }),
     );
   } catch {
     /* localStorage niedostępny - ignorujemy */
