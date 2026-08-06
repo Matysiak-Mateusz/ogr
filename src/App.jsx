@@ -84,8 +84,7 @@ export default function App() {
   function goToParagraph(id) {
     if (!story.has(id)) return;
     const isTollChoiceParagraph = TOLL_CHOICE_PARAGRAPHS.has(currentId);
-    const shouldHideChoice =
-      isTollChoiceParagraph && MORE_TOLL_TARGETS.has(id);
+    const shouldHideChoice = isTollChoiceParagraph && MORE_TOLL_TARGETS.has(id);
 
     const nextHiddenTargets = shouldHideChoice
       ? { ...hiddenTollChoiceTargets, [id]: true }

@@ -60,11 +60,27 @@ function systemTheme() {
   }
 }
 
+function isItchIoEmbed() {
+  try {
+    const inIframe = window.self !== window.top;
+    const referrer = document.referrer || "";
+    if (!inIframe || !referrer) return false;
+
+    const referrerHost = new URL(referrer).hostname;
+    return /(^|\.)itch\.io$/i.test(referrerHost);
+  } catch {
+    return false;
+  }
+}
+
 export function loadTheme() {
   try {
-    return localStorage.getItem(STORAGE_KEYS.theme) || systemTheme();
-  } catch {
+    const savedTheme = localStorage.getItem(STORAGE_KEYS.theme);
+    if (savedTheme) return savedTheme;
+    if (isItchIoEmbed()) return "dark";
     return systemTheme();
+  } catch {
+    return isItchIoEmbed() ? "dark" : systemTheme();
   }
 }
 
