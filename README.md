@@ -78,7 +78,7 @@ npm run preview
 
 ---
 
-## Demo
+## Gameplay
 
 <p align="center">
 	<img src="./public/demo.gif" alt="Gameplay demo" width="900" />
